@@ -1,0 +1,8 @@
+<h1>Connexion</h1>
+<form>
+    <label class="form-label" for="username">identifiant</label>
+    <input class="form-control" type="text" [formControl]="username">
+    <label class="form-label" for="password">mot de passe</label>
+    <input class="form-control mb-3" type="password" [formControl]="password">
+    <button type="submit" class="btn btn-success" (click)="login()">Se connecter</button>
+</form>

@@ -1,0 +1,6 @@
+<a class="btn btn-success" routerLink="add">nouvel utilisateur</a>
+<div class="list-group">
+    <app-user-list-item class="list-group-item" *ngFor="let user of users"
+        [id]="user.id"
+        [name]="user.name">
+    </app-user-list-item>
