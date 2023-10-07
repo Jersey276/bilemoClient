@@ -13,7 +13,7 @@ export class UserListComponent implements OnInit {
 
   constructor(private auth : AuthService , private http : HttpClient) { 
     this.auth.checkAuth(true);
-    this.http.get<any[]>('http://bilemo.tristan-lefevre.com/api/users', {headers : auth.getHeader()})
+    this.http.get<any[]>('http://bilemo.tristan-lefevre.fr/api/users', {headers : auth.getHeader()})
     .subscribe(
       (result) => {
         this.users = result;

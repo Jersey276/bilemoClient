@@ -20,7 +20,7 @@ export class AuthService {
   }
 
   login (username : string, password : string) {
-    this.http.post<any>('http://bilemo.tristan-lefevre.com/login',{'username':username, 'password': password})
+    this.http.post<any>('http://bilemo.tristan-lefevre.fr/login',{'username':username, 'password': password})
     .subscribe(
       (result) => {
         this.token = result.token;

@@ -15,7 +15,7 @@ export class ProductDetailComponent implements OnInit {
 
   constructor(private auth : AuthService, private http : HttpClient, private route: ActivatedRoute) {
     this.auth.checkAuth(true);
-    this.http.get<product>('http://bilemo.tristan-lefevre.com/api/products/'+ this.route.snapshot.params['id'], {headers : this.auth.getHeader()})
+    this.http.get<product>('http://bilemo.tristan-lefevre.fr/api/products/'+ this.route.snapshot.params['id'], {headers : this.auth.getHeader()})
     .subscribe(
       (result) => {
         this.product = result;

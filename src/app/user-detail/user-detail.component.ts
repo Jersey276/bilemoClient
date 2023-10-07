@@ -12,7 +12,7 @@ import { User } from '../User';
 export class UserDetailComponent implements OnInit {
 
   user! : User;
-  url : string = "http://bilemo.tristan-lefevre.com/api/users/";
+  url : string = "http://bilemo.tristan-lefevre.fr/api/users/";
   constructor(private auth: AuthService, private http: HttpClient,private active: ActivatedRoute, private route:Router) {
     this.auth.checkAuth(true);
     this.http.get<User>(this.url + this.active.snapshot.params['id'] , {headers : auth.getHeader()})

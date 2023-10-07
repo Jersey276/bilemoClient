@@ -22,7 +22,7 @@ export class UserAddComponent implements OnInit {
   }
 
   create() {
-    this.http.post<User>('http://bilemo.tristan-lefevre.com/api/users',{ 'name': this.name.value, "address": this.address.value }, {headers: this.auth.getHeader()})
+    this.http.post<User>('http://bilemo.tristan-lefevre.fr/api/users',{ 'name': this.name.value, "address": this.address.value }, {headers: this.auth.getHeader()})
     .subscribe(
       (result) => {
         this.route.navigate(['users/'+result.id])

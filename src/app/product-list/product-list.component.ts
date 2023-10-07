@@ -15,7 +15,7 @@ export class ProductListComponent implements OnInit {
 
   constructor(private auth : AuthService, private http : HttpClient) {
     this.auth.checkAuth(true);
-    this.http.get<any[]>('http://bilemo.tristan-lefevre.com/api/products', { headers : this.headers})
+    this.http.get<any[]>('http://bilemo.tristan-lefevre.fr/api/products', { headers : this.headers})
     .subscribe(
       (result) => {
         this.products = result;
