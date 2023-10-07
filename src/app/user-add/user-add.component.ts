@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { User } from '../User';
@@ -12,8 +12,8 @@ import { User } from '../User';
 })
 export class UserAddComponent implements OnInit {
 
-  name : FormControl = new FormControl('');
-  address : FormControl = new FormControl('');
+  name : UntypedFormControl = new UntypedFormControl('');
+  address : UntypedFormControl = new UntypedFormControl('');
   constructor(private auth: AuthService, private route: Router, private http: HttpClient) {
     this.auth.checkAuth(true);
   }

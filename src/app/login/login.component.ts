@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import { AuthService } from '../auth.service';
 
 @Component({
@@ -10,8 +10,8 @@ import { AuthService } from '../auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  username : FormControl = new FormControl('');
-  password : FormControl = new FormControl('');
+  username : UntypedFormControl = new UntypedFormControl('');
+  password : UntypedFormControl = new UntypedFormControl('');
 
   constructor(private auth : AuthService) { }
 
